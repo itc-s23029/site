@@ -12,7 +12,7 @@
 }
 
 .title {
-  --stack-space: 0.2;
+  --stack-space: 0.2em;
 }
 
 .publish {

@@ -8,15 +8,17 @@ import {
   TwoColumnSidebar
 } from 'components/two-column'
 import ConvertBody from 'components/convert-body'
+import PostCategories from 'components/post-categories'
 import Image from 'next/image'
 
-export default function Schedule ({
+const Schedule = ({
   title,
   publish,
   content,
   eyecatch,
-  categories
-}) {
+  categories,
+  description
+}) => {
   return (
     <Container>
       <article>
@@ -40,12 +42,15 @@ export default function Schedule ({
               <ConvertBody contentHTML={content} />
             </PostBody>
           </TwoColumnMain>
-          <TwoColumnSidebar></TwoColumnSidebar>
+          <TwoColumnSidebar>
+            <PostCategories categories={categories} />
+          </TwoColumnSidebar>
         </TwoColumn>
       </article>
     </Container>
   )
 }
+export default Schedule
 
 export async function getStaticProps () {
   const slug = 'schedule'
