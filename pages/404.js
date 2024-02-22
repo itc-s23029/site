@@ -11,4 +11,4 @@ const Custom404 = () => {
   )
 }
 
-export { Custom404 }
+export default Custom404
